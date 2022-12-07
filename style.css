@@ -65,15 +65,16 @@ nav li {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.486);
 }
 
-.sub-menu a {
+.menu2 a {
     text-decoration: none;
     color: rgb(150, 150, 150);
     font-size: 15px;
     transition: all 0.5s;
 }
 
-.sub-menu a:hover {
+.menu2 a:hover {
     color: #cecece;
+    transform: scale(1.1);
 }
 
 .menu2 li {
@@ -81,6 +82,7 @@ nav li {
     margin-right: 40px;
     border-right: 1px solid rgb(150, 150, 150);
     padding-right: 40px;
+    transition: all 0.5s;
 }
 
 .menu2 li:last-child {
