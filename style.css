@@ -223,6 +223,11 @@ nav li {
 .news-item img {
     width: 100%;
     height: auto;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.news-item img:hover {
+    transform: scale(1.03);
 }
 
 .news-item h2 {
