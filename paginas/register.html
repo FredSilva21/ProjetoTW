@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newspaper</title>
+    <link rel="stylesheet" href="../styles/login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+</head>
+<body>
+    <div class="container">
+        <div class="forms">
+            <div class="form-login">
+                <span class="title">Entrar</span>
+
+                <form action="">
+                    <div class="input-field">
+                        <input type="text" placeholder="Nome de Utilizador"  id="user" required>
+                        <i id="envelope" class="uil uil-envelope icon"></i>
+                    </div>
+                    <div class="input-field">
+                        <input type="text" placeholder="Email"  id="email" required>
+                        <i id="envelope" class="uil uil-envelope icon"></i>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" id="password" class="password" placeholder="Palavra-Passe" type="txtPassword" required>
+                        <i id="lock" class="uil uil-lock icon"></i>
+                    </div>
+                    <div class="input-field">
+                        <input type="tel" id="phonenumber" class="phonenumber" placeholder="Telemóvel" required>
+                        <i id="phone" class="uil uil-phone icon"></i>
+                    </div>
+                    
+                    <div class="input-field button">
+                        <input class="btn btn-primary" value="Criar Conta" onclick="createaccount()">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
