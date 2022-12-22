@@ -1,46 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Newspaper</title>
-    <link rel="stylesheet" href="../styles/login.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    
-</head>
-<body>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Responsive Registration Form</title>
+    <meta name="viewport" content="width=device-width,
+      initial-scale=1.0"/>
+    <link rel="stylesheet" href="../styles/login.css" />
+  </head>
+  <body>
     <div class="container">
-        <div class="forms">
-            <div class="form-login">
-                <span class="title">Entrar</span>
+      <h1 class="form-title">Registration</h1>
+      <form action="#">
+        <div class="main-user-info">
+          <div class="user-input-box">
+            <label for="fullName">Nome de Utilizador</label>
+            <input type="text"
+                    id="username"
+                    name="userName"
+                    placeholder="Nome de Utilizador"/>
+          </div>
 
-                <form action="">
-                    <div class="input-field">
-                        <input type="text" placeholder="Nome de Utilizador"  id="user" required>
-                        <i id="envelope" class="uil uil-envelope icon"></i>
-                    </div>
-                    <div class="input-field">
-                        <input type="password" id="password" class="password" placeholder="Palavra-Passe" type="txtPassword" required>
-                        <i id="lock" class="uil uil-lock icon"></i>
-                    </div>
-                    
-                    <div class="input-field button">
-                        <input class="btn btn-primary" value="Entrar" onclick="login()">
-                    </div>
-                </form>
-
-                <div class="login-signup">
-                    <span class="text">Não tens conta?
-                        <a href="register.html" class="text signup-link">Crie uma</a>
-                    </span>
-                </div>
-            </div>
+          <div class="user-input-box">
+            <label for="password">Palavra-Passe</label>
+            <input type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Palavra-Passe"/>
+          </div>
         </div>
+        </div>
+        <br>
+        <div class="form-submit-btn">
+          <input type="submit" value="Register">
+        </div>
+      </form>
     </div>
-</body>
+  </body>
 </html>

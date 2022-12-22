@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Responsive Registration Form</title>
+    <meta name="viewport" content="width=device-width,
+      initial-scale=1.0"/>
+    <link rel="stylesheet" href="../styles/register.css" />
+  </head>
+  <body>
+    <header>
+        
+    </header>
+
+    <div class="container">
+      
+      <h1 class="form-title"><img src="../img/logo.svg" alt="">Criar Conta</h1>
+      
+      <form action="#">
+        <div class="main-user-info">
+          <div class="user-input-box">
+            <label for="fullName">Nome de Utilizador</label>
+            <input type="text"
+                    id="username"
+                    name="userName"
+                    placeholder="Nome de Utilizador"/>
+          </div>
+          <div class="user-input-box">
+            <label for="">Data de Nascimento</label>
+            <input type="date"
+                    id="dataNascimento"
+                    name="username"/>
+          </div>
+          <div class="user-input-box">
+            <label for="email">Email</label>
+            <input type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter Email"/>
+          </div>
+          <div class="user-input-box">
+            <label for="phoneNumber">Número de telefone</label>
+            <input type="tel"
+                    id="phoneNumber"
+                    name="phoneNumber"
+                    placeholder="Enter Phone Number"/>
+          </div>
+          <div class="user-input-box">
+            <label for="password">Palavra-Passe</label>
+            <input type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Palavra-Passe"/>
+          </div>
+          <div class="user-input-box">
+            <label for="confirmPassword">Confirmar Palavra-Passe</label>
+            <input type="password"
+                    id="confirmPassword"
+                    name="confirmPassword"
+                    placeholder="Confirmar Palavra-Passe"/>
+          </div>
+        </div>
+        <div class="gender-details-box">
+          <span class="gender-title">Genero</span>
+          <div class="gender-category">
+            <input type="radio" name="gender" id="male">
+            <label for="male">Masculino</label>
+            <input type="radio" name="gender" id="female">
+            <label for="female">Feminino</label>
+            <input type="radio" name="gender" id="other">
+            <label for="other">Outro</label>
+          </div>
+        </div>
+        <div class="form-submit-btn">
+          <input type="submit" value="Criar Conta">
+        </div>
+        <div class="form-submit-btn">
+            <a href="login.html"><input type="button" value="Já tem conta? Inicie Sessão"></a>
+          </div>
+      </form>
+    </div>
+  </body>
+</html>
