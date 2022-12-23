@@ -1,39 +1,32 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <title>Responsive Registration Form</title>
-    <meta name="viewport" content="width=device-width,
-      initial-scale=1.0"/>
-    <link rel="stylesheet" href="../styles/login.css" />
-  </head>
-  <body>
-    <div class="container">
-      <h1 class="form-title">Registration</h1>
-      <form action="#">
-        <div class="main-user-info">
-          <div class="user-input-box">
-            <label for="fullName">Nome de Utilizador</label>
-            <input type="text"
-                    id="username"
-                    name="userName"
-                    placeholder="Nome de Utilizador"/>
-          </div>
-
-          <div class="user-input-box">
-            <label for="password">Palavra-Passe</label>
-            <input type="password"
-                    id="password"
-                    name="password"
-                    placeholder="Palavra-Passe"/>
-          </div>
-        </div>
-        </div>
-        <br>
-        <div class="form-submit-btn">
-          <input type="submit" value="Register">
-        </div>
-      </form>
-    </div>
-  </body>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>NewsPaper</title>
+      <link rel="stylesheet" href="../styles/login.css">
+   </head>
+   <body>
+      <div class="wrapper">
+         <div class="title">
+            Entrar Conta
+         </div>
+         <form action="#">
+            <div class="field">
+               <input type="text" required>
+               <label>Nome de Utilizador</label>
+            </div>
+            <div class="field">
+               <input type="password" required>
+               <label>Palavra-Passe</label>
+            </div>
+            <div class="field">
+               <input type="submit" value="Entrar">
+            </div>
+            <div class="signup-link">
+               Não tem conta? <a href="./register.html">Crie uma!</a>
+            </div>
+         </form>
+      </div>
+   </body>
 </html>
