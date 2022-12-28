@@ -12,5 +12,5 @@ function showSlides() {
     slideIndex = 1
   }
   slides[slideIndex-1].style.display = "block";
-  setTimeout(showSlides, 5000); // Muda de imagem a cada 2s
+  setTimeout(showSlides, 5000); // Muda de imagem a cada 5s
 }

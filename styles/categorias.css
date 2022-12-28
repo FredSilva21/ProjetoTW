@@ -1,0 +1,330 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #ffffff;
+    font-family: "Poppins", sans-serif
+}
+
+.main_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background-color:#13216c;
+    height: 90px;
+
+}
+
+header .logo {
+    width: 42px;
+    height: 42px;
+    border-radius: 100px;
+
+}
+
+header .logo img {
+    width: 100%;
+    height: 100%;
+    border-radius: 100px;
+}
+
+header .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 220px;
+}
+
+header .menu a {
+    text-decoration: none;
+    color: rgb(199, 190, 216);
+    font-size: 18px;
+    transition: all 0.5s;
+}
+
+header .menu a:hover {
+    color: #cecece;
+}
+
+nav li {
+    list-style-type: none;
+}
+
+.sub-menu {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0 20px;
+    background-color: rgb(255, 255, 255);
+    height: 80px;
+
+}
+
+.rest-menu{
+    background-color: #13216c;
+    width: 100%;
+    height: 20px;
+}
+
+.menu2 a {
+    text-decoration: none;
+    color: #13216c;
+    font-size: 20px;
+    transition: all 0.5s;
+}
+
+.menu2 a:hover {
+    color: #cecece;
+    transform: scale(1.1);
+    text-decoration: none;
+}
+
+.menu2 li {
+    list-style-type: none;
+    margin-right: 40px;
+    border-right: 1px solid rgb(150, 150, 150);
+    padding-right: 40px;
+    transition: all 0.5s;
+}
+
+.menu2 li:last-child {
+    border-right: none;
+    padding-right: 0;
+}
+
+.menu2 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 220px;
+}
+
+.bntime {
+    display: inline-block;
+    color: rgb(255, 255, 255, 0.5);
+    padding: 0 10px;
+    font-size: 12px;
+}
+
+#popular_news {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 30px 5%;
+}
+
+#popular_news img {
+    width: 100%;
+    filter: brightness(0.7);
+}
+
+#popular_news h2 {
+    margin: 0;
+    padding: 5px;
+    color: white;
+}
+
+#featured h2 {
+    background-color: #13216c;
+}
+
+#latest h2 {
+    background-color: #13216c;
+}
+
+#our_picks h2 {
+    background-color: #13216c;
+}
+
+.carousel,
+.news_container {
+    position: relative;
+    transition: all 0.5s;
+}
+
+.latest_news_text {
+    position: absolute;
+    color: rgb(255, 255, 255);
+    z-index: 2;
+    bottom: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    padding: 0 10px;
+    transition: all 0.5s;
+}
+
+#featured {
+    flex: 2;
+
+}
+
+#latest,
+#our_picks {
+    flex: 1;
+
+}
+
+.news_container:hover {
+    cursor: pointer;
+}
+
+.news_container:hover>.latest_news_text {
+    transform: translateY(-5px);
+}
+
+.sub-title1 {
+    margin-top: 50px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.sub-title {
+    border-bottom: #314ce2 2px solid;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.news-item {
+    padding: 20px;
+}
+
+.news-item img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.news-item img:hover {
+    transform: scale(1.03);
+}
+
+.news-item h2 {
+    margin: 10px;
+    border-bottom: #314ce2;
+}
+
+
+footer {
+    margin-top: 30px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+footer li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+footer a {
+    color: #fff;
+}
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
