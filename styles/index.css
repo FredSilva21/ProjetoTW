@@ -144,6 +144,7 @@ nav li {
 #popular_news img {
     width: 100%;
     filter: brightness(0.7);
+    margin-top: -7px;
 }
 
 #popular_news h2 {

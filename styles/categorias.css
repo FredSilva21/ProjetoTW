@@ -328,3 +328,27 @@ footer a {
   from {opacity: .4}
   to {opacity: 1}
 }
+
+.individual_new{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.titulo_individual{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 20px;
+}
+.texto_individual{
+    font-size: 15px;
+    margin-left: 400px;
+    margin-right: 400px;
+    margin-bottom: 100px;
+    text-align: justify;
+}
+.imagem_individual{
+    max-width: 500px;
+    max-height: 500px;
+}
