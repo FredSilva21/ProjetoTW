@@ -353,3 +353,9 @@ footer a {
   from {opacity: .4}
   to {opacity: 1}
 }
+#contactAnimation{
+    display: none;
+    justify-content: center;
+    margin-left: 346px;
+    
+}
