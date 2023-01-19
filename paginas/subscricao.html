@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Subscrever</title>
+      <link rel="stylesheet" href="../styles/subscricao.css">
+   </head>
+   <body>
+      <div class="wrapper">
+         <div class="title">
+            Subscrever
+         </div>
+         <form action="#" id="formSub">
+            <div class="field">
+               <input type="text" id="pNome" required>
+               <label>Primeiro Nome</label>
+            </div>
+            <div class="field">
+               <input type="text" id="uNome" required>
+               <label>Último Nome</label>
+            </div>
+            
+            <div class="field">
+                <input type="tel" id="nCartao" required>
+                <label>Número do Cartão</label>
+            </div>
+            
+            <div class="field" id="selectsCard">
+                <!--Option-->
+                <select name="optionMes" id="optionMes">
+                    <option value="mes" selected disabled>Mês de expiração</option>
+                    <option value="jan">01</option>
+                    <option value="fev">02</option>
+                    <option value="mar">03</option>
+                    <option value="mar">04</option>
+                    <option value="mar">05</option>
+                    <option value="jun">06</option>
+                    <option value="jul">07</option>
+                    <option value="ago">08</option>
+                    <option value="set">09</option>
+                    <option value="out">10</option>
+                    <option value="nov">11</option>
+                    <option value="dez">12</option>
+                </select>
+
+                <select name="optionAno" id="optionAno">
+                    <option value="mes" selected disabled>Ano de expiração</option>
+                    <option value="2023">2023</option>
+                    <option value="2024">2024</option>
+                    <option value="2025">2025</option>
+                    <option value="2026">2026</option>
+                    <option value="2027">2027</option>
+                    <option value="2028">2028</option>
+                    <option value="2029">2029</option>
+                    <option value="2030">2030</option>
+                </select>
+            </div>
+            <div id="preco">
+                <p>Preço: 9,99€</p>
+            </div>
+            <div class="field">
+               <input type="submit" value="Subscrever">
+            </div>
+            <div class="field">
+               <a href="javascript:history.back()"><input type="button" value="Voltar"></a>
+            </div>
+         </form>
+      </div>
+      <script src="../scripts/subscricao.js"></script>
+   </body>
+</html>

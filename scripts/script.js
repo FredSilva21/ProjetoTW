@@ -1,5 +1,3 @@
-
-
 let slideIndex = 0;
 showSlides();
 
@@ -22,3 +20,6 @@ function animateContacts(){
   document.getElementById("contactAnimation").style.animation = "showContacts 2s ease-in-out";
   setTimeout(function(){document.getElementById("contactAnimation").style.display = "none"}, 5000);
 }
+
+
+let btnEntrar=document.querySelector(".menu li a")

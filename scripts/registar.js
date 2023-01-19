@@ -4,13 +4,14 @@ const email = document.getElementById('email')
 const password = document.getElementById('password')
 const cpassword = document.getElementById('cpassword')
 const labels=document.querySelectorAll(".field label")
-let users=[]
+let users=["admin;admin;admin"]
 form.addEventListener('submit', function(event){
-    event.preventDefault()
     if (checkInputs()==true){
         users.push(name.value+";"+email.value+";"+password.value)
-        console.log(users)
+        alert("Registado com sucesso!")
+        window.location.href="./entrar.html"
     }
+    event.preventDefault()
 })
 
 function checkInputs() {
@@ -62,5 +63,6 @@ function checkInputs() {
     }
 
     return true
+
 }
 
