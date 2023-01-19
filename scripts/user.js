@@ -27,22 +27,22 @@ function checkInputs() {
        
         if(nameValue==campos[0]){
             name.style.border="1px solid red"
-            label[0].style.color="red"
+            labels[0].style.color="red"
             btn.value="Nome já existe!"
             setTimeout(function(){
                 btn.value="Registar"
                 name.style.border="1px solid lightgrey"
-                label[0].style.color="", 3000
+                labels[0].style.color="", 3000
                 return false
             })
         }else if(emailValue==campos[1]){
             email.style.border="1px solid red"
-            label[1].style.color="red"
+            labels[1].style.color="red"
             btn.value="Email já existe!"
             setTimeout(function(){
                 btn.value="Registar"
                 email.style.border="1px solid lightgrey"
-                label[1].style.color="black"
+                labels[1].style.color="black"
             }, 3000
             )
             return false
