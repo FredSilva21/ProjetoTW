@@ -14,7 +14,7 @@ form.addEventListener("submit",function(event){
     if (checkInputs()==true){
         subscritos.push(`${pNomeValue};${uNomeValue};${nCartaoValue};${mExpiracaoValue};${aExpiracaoValue}`)//Adicionar subscrito à lista
         console.log(subscritos)
-       
+        window.location.href="../index.html"
         
     }
     
