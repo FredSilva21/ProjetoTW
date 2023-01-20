@@ -5,6 +5,7 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+
 html,body{
   display: grid;
   height: 100%;
@@ -137,6 +138,7 @@ form .field input[type="submit"]{
   background: linear-gradient(-135deg, #7e707d, #13216c);
   transition: all 0.3s ease;
 }
+
 form .field input[type="submit"]:active{
   transform: scale(0.95);
 }
