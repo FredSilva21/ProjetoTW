@@ -1,26 +1,30 @@
+//Buscar dados da subscrição
 let form=document.getElementById("formSub");
 let pNome=document.getElementById("pNome");
 let uNome=document.getElementById("uNome");
 let nCartao=document.getElementById("nCartao");
-let mExpiracao=document.getElementById("mExpiracao");
-let aExpiracao=document.getElementById("aExpiracao");
-let labels=document.querySelector("div label");
+let mExpiracao=document.getElementById("optionMes");
+let aExpiracao=document.getElementById("optionAno");
+let labels=document.querySelectorAll(".field label");
 let subscritos=["teste;teste;123;01;2023"];
 
-
+//Adicionar evento ao botão de subscricao
 form.addEventListener("submit",function(event){
+    //Verificar se os inputs estão corretos
     if (checkInputs()==true){
-        subscritos.push(`${pNomeValue};${uNomeValue};${nCartaoValue};${mExpiracaoValue};${aExpiracaoValue}`)
+        subscritos.push(`${pNomeValue};${uNomeValue};${nCartaoValue};${mExpiracaoValue};${aExpiracaoValue}`)//Adicionar subscrito à lista
         console.log(subscritos)
-        alert("Subscrito com sucesso!")
+       
+        
     }
     
     event.preventDefault();
     
 });
 
+//Função para verificar se os inputs estão corretos
 function checkInputs() {
-
+    //Buscar valores dos inputs
     const pNomeValue = pNome.value
     const uNomeValue = uNome.value
     const nCartaoValue = parseInt(nCartao.value)
@@ -32,39 +36,37 @@ function checkInputs() {
     for(i=0;i<subscritos.length;i++){
         campos=subscritos[i].split(";")
        
-        if(pNomeValue==campos[0] && uNomeValue==campos[1]){
-            pNomeValue.style.border="1px solid red"
-            labels[0].style.color="red"
-            uNomeValue.style.border="1px solid red"
-            labels[1].style.color="red"
-            btn.value="Nome já existe!"
-            setTimeout(function(){
-                btn.value="Subscrever"
-                pNomeValue.style.border="1px solid lightgrey"
-                labels[0].style.color="lightgrey"
-                uNomeValue.style.border="1px solid lightgrey"
-                labels[1].style.color="lightgrey"
-                , 3000
+        if (campos[0].includes(pNomeValue)){
+            if(campos[1].includes(uNomeValue)){
+                btn.value="Já existe um subscritor com esse nome!"
+                pNome.style.borderColor="red"
+                uNome.style.borderColor="red"
+                labels[0].style.color="red"
+                labels[1].style.color="red"
+                setTimeout(function(){
+                    btn.value="Subscrever (9,99€)"
+                    pNome.style.borderColor="lightgray"
+                    uNome.style.borderColor="lightgray"
+                    labels[0].style.color="lightgray"
+                    labels[1].style.color="lightgray"
+                }, 3000)
                 return false
-            })
-        }else if(nCartaoValue==campos[2] && mExpiracaoValue==campos[3] && aExpiracaoValue==campos[4]){
-            nCartaoValue.style.border="1px solid red"
-            mExpiracaoValue.style.border="1px solid red"
-            aExpiracaoValue.style.border="1px solid red"
-            labels[2].style.color="red"
-            btn.value="Email já existe!"
-            setTimeout(function(){
-                btn.value="Subscrever"
-                nCartaoValue.style.border="1px solid lightgrey"
-                mExpiracaoValue.style.border="1px solid lightgrey"
-                aExpiracaoValue.style.border="1px solid lightgrey"
-                labels[2].style.color="lightgrey"
-            }, 3000
-            )
-            return false
+            }
+        }else if(campos[2].includes(nCartaoValue)){
+            if(campos[3].includes(mExpiracaoValue)){
+                if(campos[4].includes(aExpiracaoValue)){
+                    btn.value="Já existe um subscritor com esse cartão!"
+                    nCartao.style.borderColor="red"
+                    labels[2].style.color="red"
+                    setTimeout(function(){
+                        btn.value="Subscrever (9,99€)"
+                        nCartao.style.borderColor="lightgray"
+                        labels[2].style.color="lightgray"
+                    }, 3000)
+                    return false
+                }
+            }
         }
-        i++
+        return true
     }
-
-    return true
 }

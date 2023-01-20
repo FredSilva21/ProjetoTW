@@ -10,24 +10,26 @@ form2.addEventListener('submit', function(event){
     event.preventDefault()
 })
 
-function checkInputs2() {
-    const nameValue =name.value
-    const passwordValue = password.value
-    let btn=document.querySelector("input[type=submit]")
-    
-    //Verificar se o nome esta na lista
+function checkInputs2(){
+    let nameValue = name.value
+    let passwordValue = password.value
+    let btn2 = document.querySelector("input[type=submit]")
     for(i=0;i<users.length;i++){
-         campos=users[i].split(";")
-        
-        if(nameValue==campos[0] && passwordValue==campos[2]){
-            return true
+        campos=users[i].split(";")
+        if (campos[0].includes(nameValue)){
+            if(campos[1].includes(passwordValue)){
+                return true
+            }
         }
-        i++
     }
-        btn.value="Email ou password errados!"
-        setTimeout(function(){
-            btn.value="Entrar"
-        }, 3000
-        )
-        return false
-    }
+    btn2.value="Nome ou password incorretos!"
+    name.style.borderColor="red"
+    password.style.borderColor="red"
+    setTimeout(function(){
+        btn2.value="Entrar"
+        name.style.borderColor="lightgray"
+        password.style.borderColor="lightgray"
+    }, 3000)
+    return false
+}
+   

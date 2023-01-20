@@ -1,6 +1,7 @@
 let slideIndex = 0;
 showSlides();
 
+// Função para mostrar as imagens
 function showSlides() {
   let i;
   let slides = document.getElementsByClassName("mySlides");
@@ -15,6 +16,7 @@ function showSlides() {
   setTimeout(showSlides, 5000); // Muda de imagem a cada 5s
 }
 
+// Função para mostrar os contactos
 function animateContacts(){
   document.getElementById("contactAnimation").style.display = "block";
   document.getElementById("contactAnimation").style.animation = "showContacts 2s ease-in-out";
@@ -22,4 +24,3 @@ function animateContacts(){
 }
 
 
-let btnEntrar=document.querySelector(".menu li a")
