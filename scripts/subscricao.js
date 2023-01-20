@@ -6,16 +6,18 @@ let nCartao=document.getElementById("nCartao");
 let mExpiracao=document.getElementById("optionMes");
 let aExpiracao=document.getElementById("optionAno");
 let labels=document.querySelectorAll(".field label");
+let btn=document.querySelector("input[type=submit]")
 let subscritos=["teste;teste;123;01;2023"];
 
 //Adicionar evento ao botão de subscricao
 form.addEventListener("submit",function(event){
     //Verificar se os inputs estão corretos
     if (checkInputs()==true){
-        subscritos.push(`${pNomeValue};${uNomeValue};${nCartaoValue};${mExpiracaoValue};${aExpiracaoValue}`)//Adicionar subscrito à lista
-        console.log(subscritos)
-        window.location.href="../index.html"
-        
+        subscritos.push(`${pNome};${uNome};${nCartao};${mExpiracao};${aExpiracao}`)//Adicionar subscrito à lista
+        btn.value="Subscrito com sucesso!"
+        setTimeout(function(){
+            window.location.href="../index.html"
+        }, 2000)
     }
     
     event.preventDefault();
@@ -30,7 +32,7 @@ function checkInputs() {
     const nCartaoValue = parseInt(nCartao.value)
     const mExpiracaoValue = mExpiracao.value
     const aExpiracaoValue = aExpiracao.value
-    let btn=document.querySelector("input[type=submit]")
+    
 
     //Verificar se o nome esta na lista
     for(i=0;i<subscritos.length;i++){
@@ -45,28 +47,24 @@ function checkInputs() {
                 labels[1].style.color="red"
                 setTimeout(function(){
                     btn.value="Subscrever (9,99€)"
-                    pNome.style.borderColor="lightgray"
-                    uNome.style.borderColor="lightgray"
-                    labels[0].style.color="lightgray"
-                    labels[1].style.color="lightgray"
+                    pNome.style.borderColor="#999999"
+                    uNome.style.borderColor="#999999"
+                    labels[0].style.color="#999999"
+                    labels[1].style.color="#999999"
                 }, 3000)
                 return false
             }
-        }else if(campos[2].includes(nCartaoValue)){
-            if(campos[3].includes(mExpiracaoValue)){
-                if(campos[4].includes(aExpiracaoValue)){
+                }else if(campos[2].includes(nCartaoValue) && campos[3].includes(mExpiracaoValue) && campos[4].includes(aExpiracaoValue)){
                     btn.value="Já existe um subscritor com esse cartão!"
                     nCartao.style.borderColor="red"
                     labels[2].style.color="red"
                     setTimeout(function(){
                         btn.value="Subscrever (9,99€)"
-                        nCartao.style.borderColor="lightgray"
-                        labels[2].style.color="lightgray"
+                        nCartao.style.borderColor="#999999"
+                        labels[2].style.color="#999999"
                     }, 3000)
                     return false
                 }
             }
-        }
         return true
-    }
-}
+        }
