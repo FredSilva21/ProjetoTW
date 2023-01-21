@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
-@import url('https://fonts.googleapis.com/css?family=FontAwesome');
+
 
 * {
     margin: 0;
@@ -355,6 +355,6 @@ footer a {
 #contactAnimation{
     display: none;
     justify-content: center;
-    margin-left: 346px;
-    
+    margin-left:500px;
+    margin-top:-25px;
 }
