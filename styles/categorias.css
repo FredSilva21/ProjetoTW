@@ -103,6 +103,9 @@ nav li {
     align-items: center;
     width: 220px;
 }
+.menu2 .linha{
+    border-bottom: #314ce2 2px solid;
+}
 
 .bntime {
     display: inline-block;
